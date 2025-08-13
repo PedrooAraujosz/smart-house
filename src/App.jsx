@@ -1,72 +1,72 @@
-"use client"
-
-import { useState } from "react"
-import "./App.css"
+import { useState } from "react";
+import "./App.css";
 
 function App() {
   // Estados da Garagem
-  const [portaSocial, setPortaSocial] = useState("Fechada")
-  const [portaBasculante, setPortaBasculante] = useState("Fechada")
-  const [luzGaragem, setLuzGaragem] = useState("Desligada")
+  const [portaSocial, setPortaSocial] = useState("Fechada");
+  const [portaBasculante, setPortaBasculante] = useState("Fechada");
+  const [luzGaragem, setLuzGaragem] = useState("Desligada");
 
   // Estados da Sala de Estar
-  const [luzSala, setLuzSala] = useState("Desligada")
-  const [arCondicionado, setArCondicionado] = useState("Desligado")
-  const [umidificador, setUmidificador] = useState("Desligado")
+  const [luzSala, setLuzSala] = useState("Desligada");
+  const [arCondicionado, setArCondicionado] = useState("Desligado");
+  const [umidificador, setUmidificador] = useState("Desligado");
 
   // Estados do Quarto
-  const [luzQuarto, setLuzQuarto] = useState("Desligada")
-  const [tomadaInteligente, setTomadaInteligente] = useState("Desligada")
-  const [cortina, setCortina] = useState("Fechada")
+  const [luzQuarto, setLuzQuarto] = useState("Desligada");
+  const [tomadaInteligente, setTomadaInteligente] = useState("Desligada");
+  const [cortina, setCortina] = useState("Fechada");
 
   // Funções de controle da Garagem
   const togglePortaSocial = () => {
-    setPortaSocial(portaSocial === "Fechada" ? "Aberta" : "Fechada")
-  }
+    setPortaSocial(portaSocial === "Fechada" ? "Aberta" : "Fechada");
+  };
 
   const togglePortaBasculante = () => {
-    setPortaBasculante(portaBasculante === "Fechada" ? "Aberta" : "Fechada")
-  }
+    setPortaBasculante(portaBasculante === "Fechada" ? "Aberta" : "Fechada");
+  };
 
   const toggleLuzGaragem = () => {
-    setLuzGaragem(luzGaragem === "Desligada" ? "Ligada" : "Desligada")
-  }
+    setLuzGaragem(luzGaragem === "Desligada" ? "Ligada" : "Desligada");
+  };
 
   // Funções de controle da Sala de Estar
   const toggleLuzSala = () => {
-    setLuzSala(luzSala === "Desligada" ? "Ligada" : "Desligada")
-  }
+    setLuzSala(luzSala === "Desligada" ? "Ligada" : "Desligada");
+  };
 
   const toggleArCondicionado = () => {
-    setArCondicionado(arCondicionado === "Desligado" ? "Ligado" : "Desligado")
-  }
+    setArCondicionado(arCondicionado === "Desligado" ? "Ligado" : "Desligado");
+  };
 
   const toggleUmidificador = () => {
-    setUmidificador(umidificador === "Desligado" ? "Ligado" : "Desligado")
-  }
+    setUmidificador(umidificador === "Desligado" ? "Ligado" : "Desligado");
+  };
 
   // Funções de controle do Quarto
   const toggleLuzQuarto = () => {
-    setLuzQuarto(luzQuarto === "Desligada" ? "Ligada" : "Desligada")
-  }
+    setLuzQuarto(luzQuarto === "Desligada" ? "Ligada" : "Desligada");
+  };
 
   const toggleTomadaInteligente = () => {
-    setTomadaInteligente(tomadaInteligente === "Desligada" ? "Ligada" : "Desligada")
-  }
+    setTomadaInteligente(
+      tomadaInteligente === "Desligada" ? "Ligada" : "Desligada"
+    );
+  };
 
   const abrirCortina = () => {
-    setCortina("Em movimento")
-    setTimeout(() => setCortina("Aberta"), 1500)
-  }
+    setCortina("Em movimento");
+    setTimeout(() => setCortina("Aberta"), 1500);
+  };
 
   const fecharCortina = () => {
-    setCortina("Em movimento")
-    setTimeout(() => setCortina("Fechada"), 1500)
-  }
+    setCortina("Em movimento");
+    setTimeout(() => setCortina("Fechada"), 1500);
+  };
 
   const pararCortina = () => {
-    setCortina("Parada")
-  }
+    setCortina("Parada");
+  };
 
   return (
     <div className="App">
@@ -84,11 +84,19 @@ function App() {
             <div className="control-card">
               <h3>🚪 Porta Social</h3>
               <div className="status-indicator">
-                <span className={`status ${portaSocial === "Aberta" ? "active" : ""}`}>{portaSocial}</span>
+                <span
+                  className={`status ${
+                    portaSocial === "Aberta" ? "active" : ""
+                  }`}
+                >
+                  {portaSocial}
+                </span>
               </div>
               <div className="button-group">
                 <button
-                  className={`control-btn ${portaSocial === "Aberta" ? "active" : ""}`}
+                  className={`control-btn ${
+                    portaSocial === "Aberta" ? "active" : ""
+                  }`}
                   onClick={togglePortaSocial}
                 >
                   {portaSocial === "Fechada" ? "Abrir" : "Fechar"}
@@ -100,11 +108,19 @@ function App() {
             <div className="control-card">
               <h3>🚪 Porta Basculante</h3>
               <div className="status-indicator">
-                <span className={`status ${portaBasculante === "Aberta" ? "active" : ""}`}>{portaBasculante}</span>
+                <span
+                  className={`status ${
+                    portaBasculante === "Aberta" ? "active" : ""
+                  }`}
+                >
+                  {portaBasculante}
+                </span>
               </div>
               <div className="button-group">
                 <button
-                  className={`control-btn ${portaBasculante === "Aberta" ? "active" : ""}`}
+                  className={`control-btn ${
+                    portaBasculante === "Aberta" ? "active" : ""
+                  }`}
                   onClick={togglePortaBasculante}
                 >
                   {portaBasculante === "Fechada" ? "Abrir" : "Fechar"}
@@ -116,10 +132,21 @@ function App() {
             <div className="control-card">
               <h3>💡 Luz da Garagem</h3>
               <div className="status-indicator">
-                <span className={`status ${luzGaragem === "Ligada" ? "active" : ""}`}>{luzGaragem}</span>
+                <span
+                  className={`status ${
+                    luzGaragem === "Ligada" ? "active" : ""
+                  }`}
+                >
+                  {luzGaragem}
+                </span>
               </div>
               <div className="button-group">
-                <button className={`control-btn ${luzGaragem === "Ligada" ? "active" : ""}`} onClick={toggleLuzGaragem}>
+                <button
+                  className={`control-btn ${
+                    luzGaragem === "Ligada" ? "active" : ""
+                  }`}
+                  onClick={toggleLuzGaragem}
+                >
                   {luzGaragem === "Desligada" ? "Ligar" : "Desligar"}
                 </button>
               </div>
@@ -135,10 +162,19 @@ function App() {
             <div className="control-card">
               <h3>💡 Luz da Sala</h3>
               <div className="status-indicator">
-                <span className={`status ${luzSala === "Ligada" ? "active" : ""}`}>{luzSala}</span>
+                <span
+                  className={`status ${luzSala === "Ligada" ? "active" : ""}`}
+                >
+                  {luzSala}
+                </span>
               </div>
               <div className="button-group">
-                <button className={`control-btn ${luzSala === "Ligada" ? "active" : ""}`} onClick={toggleLuzSala}>
+                <button
+                  className={`control-btn ${
+                    luzSala === "Ligada" ? "active" : ""
+                  }`}
+                  onClick={toggleLuzSala}
+                >
                   {luzSala === "Desligada" ? "Ligar" : "Desligar"}
                 </button>
               </div>
@@ -148,11 +184,19 @@ function App() {
             <div className="control-card">
               <h3>❄️ Ar-condicionado</h3>
               <div className="status-indicator">
-                <span className={`status ${arCondicionado === "Ligado" ? "active" : ""}`}>{arCondicionado}</span>
+                <span
+                  className={`status ${
+                    arCondicionado === "Ligado" ? "active" : ""
+                  }`}
+                >
+                  {arCondicionado}
+                </span>
               </div>
               <div className="button-group">
                 <button
-                  className={`control-btn ${arCondicionado === "Ligado" ? "active" : ""}`}
+                  className={`control-btn ${
+                    arCondicionado === "Ligado" ? "active" : ""
+                  }`}
                   onClick={toggleArCondicionado}
                 >
                   {arCondicionado === "Desligado" ? "Ligar" : "Desligar"}
@@ -164,11 +208,19 @@ function App() {
             <div className="control-card">
               <h3>💨 Umidificador</h3>
               <div className="status-indicator">
-                <span className={`status ${umidificador === "Ligado" ? "active" : ""}`}>{umidificador}</span>
+                <span
+                  className={`status ${
+                    umidificador === "Ligado" ? "active" : ""
+                  }`}
+                >
+                  {umidificador}
+                </span>
               </div>
               <div className="button-group">
                 <button
-                  className={`control-btn ${umidificador === "Ligado" ? "active" : ""}`}
+                  className={`control-btn ${
+                    umidificador === "Ligado" ? "active" : ""
+                  }`}
                   onClick={toggleUmidificador}
                 >
                   {umidificador === "Desligado" ? "Ligar" : "Desligar"}
@@ -186,10 +238,19 @@ function App() {
             <div className="control-card">
               <h3>💡 Luz do Quarto</h3>
               <div className="status-indicator">
-                <span className={`status ${luzQuarto === "Ligada" ? "active" : ""}`}>{luzQuarto}</span>
+                <span
+                  className={`status ${luzQuarto === "Ligada" ? "active" : ""}`}
+                >
+                  {luzQuarto}
+                </span>
               </div>
               <div className="button-group">
-                <button className={`control-btn ${luzQuarto === "Ligada" ? "active" : ""}`} onClick={toggleLuzQuarto}>
+                <button
+                  className={`control-btn ${
+                    luzQuarto === "Ligada" ? "active" : ""
+                  }`}
+                  onClick={toggleLuzQuarto}
+                >
                   {luzQuarto === "Desligada" ? "Ligar" : "Desligar"}
                 </button>
               </div>
@@ -199,11 +260,19 @@ function App() {
             <div className="control-card">
               <h3>🔌 Tomada Inteligente</h3>
               <div className="status-indicator">
-                <span className={`status ${tomadaInteligente === "Ligada" ? "active" : ""}`}>{tomadaInteligente}</span>
+                <span
+                  className={`status ${
+                    tomadaInteligente === "Ligada" ? "active" : ""
+                  }`}
+                >
+                  {tomadaInteligente}
+                </span>
               </div>
               <div className="button-group">
                 <button
-                  className={`control-btn ${tomadaInteligente === "Ligada" ? "active" : ""}`}
+                  className={`control-btn ${
+                    tomadaInteligente === "Ligada" ? "active" : ""
+                  }`}
                   onClick={toggleTomadaInteligente}
                 >
                   {tomadaInteligente === "Desligada" ? "Ligar" : "Desligar"}
@@ -216,19 +285,35 @@ function App() {
               <h3>🪟 Cortina</h3>
               <div className="status-indicator">
                 <span
-                  className={`status ${cortina === "Aberta" || cortina === "Em movimento" ? "active" : ""} ${cortina === "Em movimento" ? "moving" : ""}`}
+                  className={`status ${
+                    cortina === "Aberta" || cortina === "Em movimento"
+                      ? "active"
+                      : ""
+                  } ${cortina === "Em movimento" ? "moving" : ""}`}
                 >
                   {cortina}
                 </span>
               </div>
               <div className="button-group">
-                <button className="control-btn" onClick={abrirCortina} disabled={cortina === "Em movimento"}>
+                <button
+                  className="control-btn"
+                  onClick={abrirCortina}
+                  disabled={cortina === "Em movimento"}
+                >
                   Abrir
                 </button>
-                <button className="control-btn" onClick={fecharCortina} disabled={cortina === "Em movimento"}>
+                <button
+                  className="control-btn"
+                  onClick={fecharCortina}
+                  disabled={cortina === "Em movimento"}
+                >
                   Fechar
                 </button>
-                <button className="control-btn stop-btn" onClick={pararCortina} disabled={cortina !== "Em movimento"}>
+                <button
+                  className="control-btn stop-btn"
+                  onClick={pararCortina}
+                  disabled={cortina !== "Em movimento"}
+                >
                   Parar
                 </button>
               </div>
@@ -237,7 +322,7 @@ function App() {
         </section>
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
