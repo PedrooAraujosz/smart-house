@@ -1,14 +1,40 @@
-# React + Vite
+# 🏠 Smart House – Controle Remoto de Dispositivos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Sobre o Projeto
+O **Smart House** é um sistema web para gerenciar e controlar dispositivos de uma residência de forma remota.  
+Com ele, é possível monitorar e acionar luzes, portas, climatização, câmeras e outros dispositivos conectados, trazendo mais conforto, segurança e praticidade para o dia a dia.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidades
+- 🔦 **Controle de iluminação** – Ligar/desligar e ajustar intensidade.
+- 🚪 **Abertura e fechamento de portas/portões**.
+- 🌡 **Monitoramento de temperatura e umidade**.
+- 📹 **Acesso a câmeras de segurança**.
+- 📅 **Agendamento de tarefas** automáticas.
+- 📱 **Acesso via dispositivos móveis**.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tecnologias Utilizadas
+- **Frontend:** HTML5, CSS3, JavaScript *(ou React/Vite)*  
+- **Backend:** Node.js / Express *(ou outro usado)*  
+- **Banco de Dados:** MySQL / MongoDB *(ou outro usado)*  
+- **Comunicação IoT:** MQTT, WebSockets ou API REST  
+- **Controle de Hardware:** ESP32 / Arduino / Raspberry Pi  
+
+---
+
+## 📂 Estrutura do Projeto
+```bash
+/
+├── public/          # Arquivos públicos
+├── src/             # Código-fonte
+│   ├── components/  # Componentes reutilizáveis
+│   ├── pages/       # Páginas do sistema
+│   ├── services/    # Integração com API / IoT
+│   └── assets/      # Imagens, ícones e estilos
+├── package.json     # Dependências e scripts
+└── README.md        # Documentação
 
 # Documentação 
